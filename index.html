@@ -9,18 +9,18 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css"
     />
     <link rel="stylesheet" href="styles.css" />
-    <title>The Stronghold</title>
+    <title>The Dojo</title>
   </head>
 
   <body class="grey darken-4">
     <div class="nav z-depth-0">
       <div class="section center">
-        <h3 class="white-text center">- The Stronghold -</h3>
+        <h3 class="white-text center">- The Dojo -</h3>
       </div>
     </div>
 
     <div class="section center">
-      <p class="grey-text flow-text">A fitness tracker for you</p>
+      <p class="grey-text flow-text">A fitness tracker for ninjas</p>
     </div>
 
     <div class="container section">
@@ -51,6 +51,32 @@
       </div>
     </div>
 
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-analytics.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      var firebaseConfig = {
+        apiKey: "AIzaSyDBY3geK0_3AfiuQq4COUIhxyb9fCXRDRk",
+        authDomain: "stronghold-fitness.firebaseapp.com",
+        databaseURL: "https://stronghold-fitness.firebaseio.com",
+        projectId: "stronghold-fitness",
+        storageBucket: "stronghold-fitness.appspot.com",
+        messagingSenderId: "395030717247",
+        appId: "1:395030717247:web:a41ea38c54c8678a7de98a",
+        measurementId: "G-DKYXW6XS16",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+      const db = firebase.firestore();
+    </script>
     <script src="https://d3js.org/d3.v5.js"></script>
     <script src="index.js"></script>
     <script src="graph.js"></script>
