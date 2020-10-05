@@ -9,7 +9,7 @@ var activity = "cycling";
 
 btns.forEach((btn) => {
   btn.addEventListener("click", (e) => {
-    // get activity
+    // get selected activity
     activity = e.target.dataset.activity;
 
     // remove and add active class
@@ -21,6 +21,9 @@ btns.forEach((btn) => {
 
     // set text of form span (the activity)
     formAct.textContent = activity;
+
+    // call the update function
+    update(data);
   });
 });
 
